@@ -11,7 +11,6 @@ public class HelloController {
 
 	@RequestMapping("/hello")
 	public String testLogin(HttpSession session) {
-		System.out.println("test");
 		return "/index";
 	}
 }
