@@ -69,8 +69,10 @@
 	<bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<!-- <property name="configLocation" value="classpath:mybatis-config.xml"></property> -->
 		<property name="dataSource" ref="readDataSource"></property>
+		<!-- 扫描model包 使用别名 -->
+		<property name="typeAliasesPackage" value="justlike.loan.model" />
 		<property name="mapperLocations"
-			value="classpath*:justlike/loan/model/**/*.xml" />
+			value="classpath*:justlike/loan/dao/**/*.xml" />
 	</bean>
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
